@@ -65,9 +65,7 @@ let package = Package(
       dependencies: [
         "protobuf",
         .product(name: "abseil", package: "abseil-cpp-SwiftPM"),
-        .product(
-          name: "openssl_grpc_nearby", package: "boringSSL-SwiftPM",
-          moduleAliases: ["NearbySSL": "openssl_grpc_nearby"]),
+        .product(name: "openssl_grpc_nearby", package: "boringSSL-SwiftPM"),
       ],
       path: "third_party/ukey2",
       exclude: ["ukey2/src/main/cpp/src/securegcm/ukey2_shell.cc"],
