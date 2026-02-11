@@ -44,8 +44,8 @@ let package = Package(
       branch: "main"
     ),
     .package(
-      url: "https://github.com/firebase/boringssl-SwiftPM.git",
-      "0.7.1"..<"0.8.0"
+      url: "https://github.com/wolat/boringSSL-SwiftPM.git",
+      branch: "main"
     ),
   ],
   targets: [
@@ -66,8 +66,8 @@ let package = Package(
         "protobuf",
         .product(name: "abseil", package: "abseil-cpp-SwiftPM"),
         .product(
-          name: "openssl_grpc", package: "boringssl-SwiftPM",
-          moduleAliases: ["NearbySSL": "openssl_grpc"]),
+          name: "openssl_grpc_nearby", package: "boringSSL-SwiftPM",
+          moduleAliases: ["NearbySSL": "openssl_grpc_nearby"]),
       ],
       path: "third_party/ukey2",
       exclude: ["ukey2/src/main/cpp/src/securegcm/ukey2_shell.cc"],
