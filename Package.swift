@@ -40,7 +40,7 @@ let package = Package(
   dependencies: [
     // Dependencies declare other packages that this package depends on.
     .package(
-      url: "https://github.com/firebase/abseil-cpp-SwiftPM.git",
+      url: "https://github.com/wolat/abseil-cpp-SwiftPM.git",
       branch: "main"
     ),
     .package(
@@ -64,7 +64,7 @@ let package = Package(
       name: "ukey2",
       dependencies: [
         "protobuf",
-        .product(name: "abseil", package: "abseil-cpp-SwiftPM"),
+        .product(name: "abseil_nearby", package: "abseil-cpp-SwiftPM"),
         .product(name: "openssl_grpc_nearby", package: "boringSSL-SwiftPM"),
       ],
       path: "third_party/ukey2",
@@ -90,7 +90,7 @@ let package = Package(
     .target(
       name: "protobuf-utf8",
       dependencies: [
-        .product(name: "abseil", package: "abseil-cpp-SwiftPM"),
+        .product(name: "abseil_nearby", package: "abseil-cpp-SwiftPM"),
       ],
       path: "third_party/protobuf/third_party/utf8_range",
       sources: [
@@ -294,7 +294,7 @@ let package = Package(
         "smhasher",
         "ukey2",
         "protobuf",
-        .product(name: "abseil", package: "abseil-cpp-SwiftPM"),
+        .product(name: "abseil_nearby", package: "abseil-cpp-SwiftPM"),
       ],
       path: ".",
       exclude: [
